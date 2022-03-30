@@ -13,7 +13,7 @@ public class dd {
         if(ans[n] != 0) {
             return ans[n];
         }
-        System.out.println("Hello " + n);
+        System.out.println(  n);
         int fibnm1 = fib(n - 1, ans);
         int fibnm2 = fib(n - 2, ans);
         ans[n] = fibnm1 + fibnm2;
