@@ -3,11 +3,9 @@ public class stack_rivision{
 
     public static void main(String[] args) {
         stack_rivision sr = new stack_rivision();
-        sr.push(56);
-        sr.push(32);
-        sr.push(23);
-        sr.push(100);
-        sr.pop();
+        sr.push("vaibhav");
+        sr.push("rajput");
+        sr.push("newwolrd");
         sr.print();
 
 
@@ -16,15 +14,15 @@ public class stack_rivision{
 
     }
    class Node {
-       int data;
+       String data;
        Node next;
-       public Node (int data){
+       public Node (String data){
            this.data=data;
            this.next=null;
        }
    }
    // push Method
-    public void push(int data){
+    public void push(String data){
        Node newnode = new Node(data);
        if (head==null){
            head = newnode;
@@ -34,11 +32,11 @@ public class stack_rivision{
        head = newnode;
     }
     // pop Method
-    public int pop(){
+    public String pop(){
        if (head == null){
            System.out.println("Stack is Empty");
        }
-       int result = head.data;
+       String result = head.data;
        head = head.next;
        return result;
     }
@@ -50,12 +48,12 @@ public class stack_rivision{
         }
            Node currnode = head;
            while (currnode!=null){
-               System.out.println(currnode.data + " ");
+               System.out.print(currnode.data + " ");
             currnode = currnode.next;
         }
     }
     // peek method
-    public int peek(){
+    public String peek(){
         if( head == null){
             System.out.println("stack is Empty");
         }
